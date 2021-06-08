@@ -7,6 +7,7 @@ import Home from './components/Home'
 import Login from './components/Login'
 import Signup from './components/SignUp'
 import Detail from './components/Detail'
+import Flutter from './components/Flutter'
 
 
 
@@ -22,6 +23,7 @@ const App=()=>{
         <stack.Screen name="Login" component={Login} options={{'title':"Login Page"}}/>
         <stack.Screen name="SignUp" component={Signup} options={{'title':"SignUp"}}/>
         <stack.Screen name="Detail" component={Detail} options={{'title':"Detail Screen"}}/>
+        <stack.Screen name="Flutter" component={Flutter} options={{'title':"Flutter"}}/>
       </stack.Navigator>
     </NavigationContainer>
   )

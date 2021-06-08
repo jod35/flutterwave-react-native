@@ -17,6 +17,9 @@ const Home =({navigation})=>{
                 <Pressable style={styles.button} onPress={() => navigation.navigate('SignUp')}>
                     <Text style={styles.text}>SignUp</Text>
                 </Pressable>
+                <Pressable style={styles.button} onPress={() => navigation.navigate('Flutter')}>
+                    <Text style={styles.text}>Flutter</Text>
+                </Pressable>
             </View>
          </View>
     )
@@ -61,7 +64,7 @@ const styles = StyleSheet.create({
         height:300,
     },
     options:{
-        top:250
+        top:200
     }
     
 })
