@@ -8,8 +8,9 @@ import Login from './components/Login'
 import Signup from './components/SignUp'
 import Detail from './components/Detail'
 import Flutter from './components/Flutter'
-import {NotifierWrapper} from 'react-native-notifier'
+// import {NotifierWrapper} from 'react-native-notifier'
 import ButtonList from './components/Items';
+import Drawer from './components/Drawer'
 
 
 
@@ -19,7 +20,7 @@ const App=()=>{
   const stack=createStackNavigator();
 
   return(
-    <NotifierWrapper>
+    // <NotifierWrapper>
     <NavigationContainer>
       <stack.Navigator>
         <stack.Screen name="Home" component={Home} options={{'title':"Home Screen"}}/>
@@ -28,9 +29,10 @@ const App=()=>{
         <stack.Screen name="Detail" component={Detail} options={{'title':"Detail Screen"}}/>
         <stack.Screen name="Flutter" component={Flutter} options={{'title':"Flutter"}}/>
         <stack.Screen name="Items" component={ButtonList} options={{'title':"Button List"}}/>
+        <stack.Screen name="Drawer" component={Drawer} options={{'title':"Drawer Screen"}}/>
       </stack.Navigator>
     </NavigationContainer>
-    </NotifierWrapper>
+    // </NotifierWrapper> 
   )
 }
 

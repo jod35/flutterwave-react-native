@@ -1,6 +1,6 @@
 import React ,{useEffect,useState}from 'react';
 import { Text, View, StyleSheet,Pressable,Image,ScrollView} from 'react-native'
-import {Notifier,Easing} from 'react-native-notifier' //please install this library
+// import {Notifier,Easing} from 'react-native-notifier' //please install this library
 
 
 
@@ -40,27 +40,27 @@ const Home =({navigation})=>{
     )
 
 
-    const triggerNotifications=()=>{ //this function triggers notifications
-        console.log("Hello")
+    // const triggerNotifications=()=>{ //this function triggers notifications
+    //     console.log("Hello")
     
     
-        notifications.forEach(notification=>{
-            Notifier.showNotification(
-                {
-                    title: notification.title,
-                    description: notification.description,
-                    duration: 0,
-                    showAnimationDuration: 300,
-                    showEasing: Easing.bounce,
-                    // onHidden: () => console.log('Hidden'),
-                    // onPress: () => console.log('Press'),
-                    hideOnPress: true,
-                    queueMode:"immediate"
-                }
-            )
-        })
+    //     notifications.forEach(notification=>{
+    //         Notifier.showNotification(
+    //             {
+    //                 title: notification.title,
+    //                 description: notification.description,
+    //                 duration: 0,
+    //                 showAnimationDuration: 300,
+    //                 showEasing: Easing.bounce,
+    //                 // onHidden: () => console.log('Hidden'),
+    //                 // onPress: () => console.log('Press'),
+    //                 hideOnPress: true,
+    //                 queueMode:"immediate"
+    //             }
+    //         )
+    //     })
         
-    }
+    // }
 
   
 
@@ -77,15 +77,20 @@ const Home =({navigation})=>{
                     <Text style={styles.text}>Flutter</Text>
                 </Pressable>
 
-                <Pressable style={styles.button}>
+                {/* <Pressable style={styles.button}>
                     <Text style={styles.text} onPress={triggerNotifications}>
                         NOtifications    {notifications.length}
                     </Text>
-                </Pressable>    
+                </Pressable>     */}
 
                 <Pressable style={styles.button} onPress={() => navigation.navigate('Items')}>
                     <Text style={styles.text}>
                         List Items
+                    </Text>
+                </Pressable>
+                <Pressable style={styles.button} onPress={() => navigation.navigate('Drawer')}>
+                    <Text style={styles.text}>
+                        Drawer
                     </Text>
                 </Pressable>
             </View>
